@@ -37,15 +37,14 @@ const displayNewsData = data => {
     for (const card of data) {
       console.log(card);
       const div = document.createElement('div')
-      div.classList.add('size')
+      div.classList.add('d-flex')
       div.innerHTML = `
-      <div class="card mb-3">
-            <div class="row g-0">
-              <div class="col-md-12">
+             <div class="d-sm-block d-md-flex d-lg-flex">
+            <div class="card row g-0 ">
                 <img src="${card.thumbnail_url}" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
-                <div class="card-body">
+                <div class="card-body ms-lg-5 ms-md-5">
                   <h5 class="card-title"> ${card.title} </h5>
                   <p class="card-text"> ${card.details.slice(0, 200)}... </p>
                 </div>
@@ -58,4 +57,10 @@ const displayNewsData = data => {
   } 
   
  
-newsData('01')
+newsData('08')
+
+// another page
+
+function myFunction() {
+  window.location.href ="question.html";
+}
