@@ -1,4 +1,7 @@
 .nav-image{
   height: 35px;
   width:60px;
+};
+.size img{
+  height: 5px!important;
 }
