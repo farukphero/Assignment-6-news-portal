@@ -46,21 +46,43 @@ const displayNewsData = data => {
               <div class="col-md-8">
                 <div class="card-body ms-lg-5 ms-md-5">
                   <h5 class="card-title"> ${card.title} </h5>
-                  <p class="card-text"> ${card.details.slice(0, 200)}... </p>
+                  <p class="card-text"> ${card.details.slice(0, 250)}... </p>
+                  <div class="card-footer d-flex justify-content-around mt-5">
+                  <div class="d-flex ">
+                  <img src="${card.author.img}" class="img-fluid rounded-circle" style="height: 50px;" alt="...">
+                  <div class="ms-3">
+                  <h6>${card.author.name}</h6>
+                  <p>${card.author.published_date}</p> 
+                  </div>
+                  </div>
+                  <div>
+                  <h6><i class="fa-solid fa-eye"></i> ${card.total_view}K</h6>
+                  </div>
+                  <div>
+                   <p><i class="fa-solid fa-star-half-stroke"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i></p>
+                  </div>
+                  <div> 
+                  <p> <i class="fa-solid fa-arrow-right text-primary"></i> </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>`
+          </div>
+          
+          
+          `
         cardContainer.appendChild(div)
       }
      ;
   } 
   
  
-newsData('08')
+newsData('01')
 
 // another page
 
-function myFunction() {
-  window.location.href ="question.html";
-}
+// function myFunction(element) {
+//   console.log('onno page')
+//   // window.location.href ="question.html";
+// };
+// // console.log(element)
