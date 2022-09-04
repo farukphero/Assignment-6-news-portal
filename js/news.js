@@ -103,7 +103,7 @@ const inputForHowNumber = document.getElementById('input-for-how-number')
   }
   toggleSpinner(false)
 };
- newsData('04')
+ newsData()
 
 const toggleSpinner = isLoading => {
   const loaderSection = document.getElementById('loader')
