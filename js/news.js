@@ -12,13 +12,11 @@ const receiveData = async () => {
 };
 
 const displayData = (types) => {
-  // console.log(types)
   const newsTypeList = document.getElementById('news-type-list')
   types.forEach(news => {
-    // console.log(news);
     const  ol = document.createElement('ol')
     ol.innerHTML = `
-    <ol onclick="newsData('${news.category_id}'), toggleSpinner(true)", "myFunction()">${news.category_name}</ol> 
+    <ol onclick="newsData('${news.category_id}'), toggleSpinner(true)">${news.category_name}</ol> 
     `
     newsTypeList.appendChild(ol)
   });
@@ -38,16 +36,14 @@ const newsData = (search, news_id) => {
   
   
 }
-
-
-  // console.log(data)
+ 
   
 const displayNewsData = data => {
   const cardContainer = document.getElementById('card-container');
   cardContainer.innerHTML = '';
   const emptyCard = document.getElementById('empty-card')
   emptyCard.innerHTML = ''
-  console.log(data)
+ 
    
 const inputForHowNumber = document.getElementById('input-for-how-number')
   if (data.length === 0) {
@@ -63,10 +59,8 @@ const inputForHowNumber = document.getElementById('input-for-how-number')
 });
 
     for (const card of data) {
-      console.log(card);
       inputForHowNumber.innerText = '('+ data.length + ')' +' '+'items found for culture category ';
       
-      //  console.log(data.length);
       const div = document.createElement('div')
       div.classList.add('d-flex')
       div.innerHTML = `
@@ -76,7 +70,7 @@ const inputForHowNumber = document.getElementById('input-for-how-number')
                 <img src="${card.thumbnail_url}" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
-                <div class="card-body ms-lg-5 ms-md-5">
+                <div class="card-body ms-lg-5 ms-md-5 mt-3">
                   <h5 class="card-title"> ${card.title} </h5>
                   <p class="card-text"> ${card.details.slice(0, 250) + '...'} </p>
                   <div class="card-footer d-sm-block d-lg-flex justify-content-around mt-5">
@@ -109,6 +103,7 @@ const inputForHowNumber = document.getElementById('input-for-how-number')
   }
   toggleSpinner(false)
 };
+ newsData('04')
 
 const toggleSpinner = isLoading => {
   const loaderSection = document.getElementById('loader')
@@ -122,7 +117,6 @@ const toggleSpinner = isLoading => {
  
   
 const modalOpen = (title , image, cardDetails, cardId, details, otherInfo) => {
-  // console.log(title , image, cardDetails, otherInfo)
   const bodyModal = document.getElementById('modal-body-open')
   const getTitleModal = document.getElementById('titleModalLabel')
   getTitleModal.innerHTML = `
@@ -138,16 +132,11 @@ const modalOpen = (title , image, cardDetails, cardId, details, otherInfo) => {
   }
   function displayByNewId() {
     const url2 = `https://openapi.programming-hero.com/api/news/${news_id}`
-    // console.log(url2)
 };
 
 const blogButton = document.getElementById('blog-to-another').addEventListener('click', function () {
   window.location.href ='part2.html'
 });
-function myFunction2() {
-  points.sort(function(a, b){return a - b});
-  document.getElementById("demo").innerHTML = points;
-}
 
  
 
