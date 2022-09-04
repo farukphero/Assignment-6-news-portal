@@ -58,6 +58,10 @@ const inputForHowNumber = document.getElementById('input-for-how-number')
   }
    
   else {
+  data.sort(function (item1, item2) {
+  return item2.total_view- item1.total_view;
+});
+
     for (const card of data) {
       console.log(card);
       inputForHowNumber.innerText = '('+ data.length + ')' +' '+'items found for culture category ';

@@ -21,42 +21,116 @@
           <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              Accordion Item #1
+            <b>Difference Between var, let, and const in JavaScript :</b>
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
             data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-              <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+            <div class="accordion-body"><b>Var</b>:
+            Before the advent of ES6, var declarations ruled. There are issues associated with variables declared with var, though.
+            That is why it was necessary for new ways to declare variables to emerge. First, let's get to understand var more before
+            we discuss those issues.
+              <code>var variables can be re-declared and updated</code> <br>
+            <b>Let:</b>
+            let is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations. It
+            also solves the problem with var that we just covered. Let's consider why this is so.
+            
+            let is block scoped
+            A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly braces is a block.
+            <code>let can be updated but not re-declared.</code><br>
+            <b>Const</b>
+            Variables declared with the const maintain constant values. const declarations share some similarities with let
+            declarations.
+            <code>const declarations are block scoped and const cannot be updated or re-declared.</code>
+          </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              Accordion Item #2
+               <b>The Difference Between Regular Functions and Arrow Functions</b>
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
             data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-              <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled
-              with some actual content.</div>
+            <div class="accordion-body"><b>1. Regular function</b>
+            Inside of a regular JavaScript function, this value (aka the execution context) is dynamic.
+            
+            The dynamic context means that the value of this depends on how the function is invoked. In JavaScript, there are 4 ways
+            you can invoke a regular function.
+            
+            During a simple invocation the value of this equals to the global object (or undefined if the function runs in strict
+            mode): 
+            <br>
+            <code>declaration of normal function</code><br>
+            function myFunction() {<br>
+            console.log(this);<br>
+            } <br>
+            myFunction();
+            <br>
+            <br>
+            <b>2. Arrow function</b>
+            The behavior of this inside of an arrow function differs considerably from the regular function's this behavior. The
+            arrow function doesn't define its own execution context.
+            
+            No matter how or where being executed, this value inside of an arrow function always equals this value from the outer
+            function. In other words, the arrow function resolves this lexically.
+            
+            In the following example, myMethod() is an outer function of callback() arrow function:
+            <code>declaration method</code>
+             <br>
+             const increment = (num) => num + 1;
+               </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Accordion Item #3
+               <b>Difference between.forEach(), .map(), .filter() , .find()</b>
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
             data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-              <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening
-              here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more
-              representative of how this would look in a real-world application.</div>
+            <div class="accordion-body"><b>.forEach:</b><br>
+            .forEach(), is used to execute the same code on every element in an array but does not change the array and it returns
+            undefined.
+            <br>
+            <b>.map():</b><br>
+            .map() executes the same code on every element in an array and returns a new array with the updated elements.
+            <br>
+            <b>.filter():</b><br>
+            .filter() checks every element in an array to see if it meets a certain criteria and returns a new array with the
+            elements that return truthy for the criteria.
+            <br>
+            <b>.find()</b><br>
+            .find() will look and stop after the first match.
+            find() method return the first value which match from the collection. find() method search the array from the start if
+            the desired value is matched then find() method return that value and terminate and rest of the array is not process.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              <b>Why use template string ?</b>
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">ES6's template strings is a new way to combine strings. We already have methods such as join(), concat() etc to combine
+            strings but the template strings method is the most sophisticated because it’s more readable, no backslash to escape
+            quotes and no more messy plus operators.
+            The template strings method is used to combine strings. If we compare this method with other
+            methods, the code in this method is very concise and readable.<br>
+            <b>Syntax</b><br>
+            <code>
+              `string text line 1 <br>
+              string text line 2`
+            </code>
+          </div>
           </div>
         </div>
       </div>
