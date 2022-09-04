@@ -18,10 +18,11 @@ const displayData = (types) => {
     // console.log(news);
     const  ol = document.createElement('ol')
     ol.innerHTML = `
-    <ol  onclick="newsData('${news.category_id}')">${news.category_name}</ol> 
+    <ol onclick="newsData('${news.category_id}'), toggleSpinner(true)", "myFunction()">${news.category_name}</ol> 
     `
     newsTypeList.appendChild(ol)
   });
+ 
 };
 receiveData();
 
@@ -57,7 +58,6 @@ const inputForHowNumber = document.getElementById('input-for-how-number')
   }
    
   else {
-    
     for (const card of data) {
       console.log(card);
       inputForHowNumber.innerText = '('+ data.length + ')' +' '+'items found for culture category ';
@@ -101,10 +101,20 @@ const inputForHowNumber = document.getElementById('input-for-how-number')
           </div>
           `
       cardContainer.appendChild(div)
-    }
-    ;
+    };
   }
+  toggleSpinner(false)
 };
+
+const toggleSpinner = isLoading => {
+  const loaderSection = document.getElementById('loader')
+  if (isLoading) {
+    loaderSection.classList.remove('d-none')
+  }
+  else {
+    loaderSection.classList.add('d-none')
+  }
+}
  
   
 const modalOpen = (title , image, cardDetails, cardId, details, otherInfo) => {
@@ -130,19 +140,10 @@ const modalOpen = (title , image, cardDetails, cardId, details, otherInfo) => {
 const blogButton = document.getElementById('blog-to-another').addEventListener('click', function () {
   window.location.href ='part2.html'
 });
-//   const inputTotalValue=[]
-//   function buttonFrom () {
-   
-//   // card.length = inputForHowNumber.value
-//   console.log(inputForHowNumberValue)
-//  }
-
-// card.length = inputForHowNumberValue;
-
-
-// const clickBtn = document.getElementById('click-btn')
-// const res = clickBtn = inputForHowNumber.value
-// console.log(clickBtn)
+function myFunction2() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("demo").innerHTML = points;
+}
 
  
 
