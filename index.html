@@ -14,18 +14,29 @@
 
 <body>
    <header class="container mt-5">
-    <nav class="navbar bg-light">
+    <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand text-primary fs-4 fw-semibold">Trusty News Network</a>
-        <form class="d-flex" role="search">
-          <button  class="btn text-primary">News</button>
-          <button  onclick="myFunction()" class="btn">Blog</button>
-          <img class="nav-image" src="image/omar.jpg" alt="">
-        </form>
-        
+        <a class="navbar-brand text-primary fs-4 fw-semibold" aria-current="page" href="#">Trusty News Network</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              
+            </li>
+          </ul>
+           
+            <form class="d-flex" role="search">
+              <button class="btn text-primary">News</button>
+              <a id="blog-to-another" class="btn">Blog</a>
+            </form>
+           
+        </div>
       </div>
     </nav>
-    <hr>
+    <hr class="mb-5 text-primary">
    </header>
    <!-- main part start  -->
    <main class="container">
@@ -36,7 +47,7 @@
     </section>
     <section class="mt-5 mb-5">
       <div>
-        <input id="input-for-how-number" class="form-control form-control-lg" type="text" aria-label=".form-control-lg example">
+        <div id="input-for-how-number" class="form-control text-primary form-control-lg text-center fs-3" type="text" aria-label=".form-control-lg example">
       </div>
       <div class="container-fluid navbar mt-3">
        <div><a class="navbar-brand">Sort By View:</a>
@@ -61,15 +72,13 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="titleModalLabel">Title</h5>
               </div>
-              <div id="modal-body-open" class="modal-body">
-                ...
+              <div id="modal-body-open" class="modal-body fw-bolder">
+                
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>

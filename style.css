@@ -2,13 +2,4 @@
   height: 35px;
   width:60px;
 };
-.size img{
-  height: 5px!important;
-}
-.register-btn {
-  color: #289bde;
-}
 
-.register-btn:hover {
-  color: #289bde;
-}
